@@ -22,12 +22,8 @@ public class ProxyInvocationHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         //动态代理本质，是使用反射机制；
-        seehouse();
         Object result = method.invoke(rent, args);
-
         return result;
     }
-    public void seehouse(){
-        System.out.println("中介看房子");
-    }
+
 }

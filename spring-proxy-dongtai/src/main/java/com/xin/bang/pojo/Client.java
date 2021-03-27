@@ -8,8 +8,9 @@ public class Client  {
         ProxyInvocationHandler proxy = new ProxyInvocationHandler();
 
         //通过调用程序处理角色来处理我们要调用的接口对象
-        proxy.setRent(host);
-        Rent proxy1 = (Rent) proxy.getProxy();
+        proxy.setRent(host);//设置代理对象；
+        //动态生成代理类
+        Rent proxy1 = (Rent) proxy.getProxy();//proxy1是动态生成的；
         proxy1.rent();
     }
 
